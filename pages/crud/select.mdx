@@ -1,37 +1,35 @@
 # Select All 
 
-The 'Select All' query capability is available in the API and is supported in both MongoDB and RDBMS. This feature is implemented using the Java Query DSL library, and 'Select All' inherently supports limit-based pagination by default
+The 'Select All' query capability is available in the API and is supported in both MongoDB and RDBMS. This feature is implemented using the Java Query DSL library, and 'Select All' inherently supports limit-based pagination by default.
 
-
-| Query Params        | Description | 
+| Query Params | Description | 
 | :------------ | :--------- |
-| filters        | Ability to filter records with conditional operators    | 
-| sort     | Sort the records based on field in ascending or descending order     |
-| limit |   Pagination per page limit          |  
-| offset |  Pagination start parameter           |  
+| filters | Ability to filter records with conditional operators | 
+| sort | Sort the records based on field in ascending or descending order |
+| limit | Limit the number of records per page |
+| offset | Pagination start parameter |
 
-Note : All filters are combined with AND operator
+Note: All filters are combined with the AND operator.
  
-## Filter operations 
+## Filter Operations 
 
 Select all is supported with a bunch of operators
 
-| Filter Operator       | Description | 
+| Filter Operator | Description | 
 | :------------ | :--------- |
-| eq        | Equal To    | 
-| gt     | Greater Than   |
-| gte |   Greater Than Equal To         |  
-| lt |  Less Than           |  
-| lte |  Less Than Equal To          |  
-
+| eq | Equal To | 
+| gt | Greater Than |
+| gte | Greater Than Equal To |  
+| lt | Less Than |  
+| lte | Less Than Equal To |  
 
 ## Sort Operations
 
-| Sort Operator       | Description | 
+| Sort Operator | Description | 
 | :------------ | :--------- |
-| -sortByField        | DESCENDING  | 
-| +sortByField     | ASCENDING   |
-| sortByField     | ASCENDING   |
+| -sortByField | DESCENDING | 
+| +sortByField | ASCENDING |
+| sortByField | ASCENDING |
 
 ## Examples 
 

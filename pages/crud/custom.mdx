@@ -1,59 +1,48 @@
 # Custom API
 
-Radical.sh generates standard API's of CRUD as soon as the api is enabled. But few custom API's might be required to introduce custom end points. 
 
-Custom API's can be built with following options
-1. Go to API tab
-2. Click on Add in the sidebar
-3. Select the schema for which custom API has to be added
-4. Enter the name of API
-5. Choose the newly selected API in sidebar
+Radical generates standard CRUD APIs as soon as the API is enabled. However, in some cases, custom APIs might be required to introduce specific endpoints.
 
+To build custom APIs, follow these steps:
 
-## Visiblity and auth
-To control these options, check [modify advanced options](./advanced)
+1. Go to the API tab.
+2. Click on "Add" in the sidebar.
+3. Select the schema for which the custom API has to be added.
+4. Enter the name of the API.
+5. Choose the newly selected API in the sidebar.
 
-## Request and Response options
+## Visibility and Authentication
+To control these options, check [modify advanced options](./advanced).
+
+## Request and Response Options
 
 ### Request Options
-In the request side, you can control verb and path of the custom api. 
+On the request side, you can control the verb and path of the custom API.
 
-**Verb** - To contorl whether request is GET / POST / PUT / DELETE
-
-**Path** - This will be path of the custom api. 
-
-Example `/actions/returns`
-
-**Query Parameters** - If any custom query parameters to be added for example `country`
-
-Example `/actions/returns?country=XX`
-
-**Headers** - If any custom header to be consumed in API
+- **Verb**: Control whether the request is GET / POST / PUT / DELETE.
+- **Path**: This will be the path of the custom API. Example: `/actions/returns`.
+- **Query Parameters**: Add any custom query parameters (e.g., `country`). Example: `/actions/returns?country=XX`.
+- **Headers**: Include any custom headers to be consumed in the API.
 
 ### Response Options
-
-Status - Choose between 200 / 201 / 202 
-
-Redirection Url - If 201 / 202 is specified the redirection action has to be selected to a get action on existing resource
+- **Status**: Choose between 200 / 201 / 202.
+- **Redirection URL**: If 201 / 202 is specified, select the redirection action to a GET action on the existing resource.
 
 ### Custom API Type
-
-**Type** - Schema of the custom API, this can be different compared to base schema where custom API is added.
-
+- **Type**: Schema of the custom API. This can be different compared to the base schema where the custom API is added.
 
 ## Example
-Create registrations in vechicles
+Create registrations in vehicles:
 
-```/vechicles/{vehicleId}/registrations```
+```/vehicles/{vehicleId}/registrations```
 
-1. Vehicle Schema to be created
-2. Enable CRUD for vehicles
-3. Reigstration Schema to be created
-4. Create custom api in vehicles for create registrations
-5. Select type as Registration
-6. For PUT and POST verb, fields to be exposed can be selected
-7. Add query parameters, authorization (optional)
-8. Choose the response status
+1. Create a Vehicle Schema.
+2. Enable CRUD for vehicles.
+3. Create a Registration Schema.
+4. Create a custom API in vehicles for creating registrations.
+5. Select the type as Registration.
+6. For PUT and POST verbs, select the fields to be exposed.
+7. Add query parameters and authorization (optional).
+8. Choose the response status.
 
-This custom api will add controller and service layer based on visiblity selection.
-
+This custom API will add the controller and service layer based on the visibility selection.
